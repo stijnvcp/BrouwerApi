@@ -8,11 +8,23 @@ using System.Threading.Tasks;
 
 namespace BrouwerService.Controllers
 {
-    [Route(("brouwers")]
+    [Route("brouwers")]
     [ApiController]
-    public class BrouwerController : ControllerBase
-    {
+    public class BrouwerController : ControllerBase {
         private readonly IBrouwerRepository repository;
         public BrouwerController(IBrouwerRepository repository) => this.repository = repository;
+
+        [HttpGet]
+        public ActionResult FindAll() => base.Ok(repository.FindAll());
+
+        [HttpGet("{id}")]
+        public ActionResult FindById(int id) {
+            var brouwer = repository.FindById(id);
+            return brouwer == null ? base.NotFound() : base.Ok(brouwer);
+        }
+
+        [HttpGet("naam")]
+        public ActionResult FindByBeginNaam(string begin) =>
+            base.Ok(repository.FindByBeginNaam(begin));
     }
 }
