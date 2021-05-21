@@ -32,7 +32,7 @@ namespace BrouwerService
 
             services.AddScoped<IBrouwerRepository, BrouwerRepository>();
 
-            services.AddControllers();
+            services.AddControllers().AddXmlDataContractSerializerFormatters();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "BrouwerService", Version = "v1" });
