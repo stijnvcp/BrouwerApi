@@ -32,6 +32,8 @@ namespace BrouwerService
 
             services.AddScoped<IBrouwerRepository, BrouwerRepository>();
 
+            services.AddCors();
+
             services.AddControllers().AddXmlDataContractSerializerFormatters();
             services.AddSwaggerGen(c =>
             {
@@ -60,6 +62,7 @@ namespace BrouwerService
 
             app.UseEndpoints(endpoints =>
             {
+                app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyHeader());
                 endpoints.MapControllers();
             });
         }
