@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrouwerService", "BrouwerService\BrouwerService.csproj", "{8A9C8155-613A-4366-B5E8-1CC44E24434C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrouwerService", "BrouwerService\BrouwerService.csproj", "{8A9C8155-613A-4366-B5E8-1CC44E24434C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrouwerClient", "BrouwerClient\BrouwerClient.csproj", "{4E43FD73-4C42-4F42-9AB7-25BD5FF6673D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{8A9C8155-613A-4366-B5E8-1CC44E24434C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A9C8155-613A-4366-B5E8-1CC44E24434C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A9C8155-613A-4366-B5E8-1CC44E24434C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E43FD73-4C42-4F42-9AB7-25BD5FF6673D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E43FD73-4C42-4F42-9AB7-25BD5FF6673D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E43FD73-4C42-4F42-9AB7-25BD5FF6673D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E43FD73-4C42-4F42-9AB7-25BD5FF6673D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

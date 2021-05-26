@@ -7,6 +7,7 @@ using Swashbuckle.AspNetCore.Annotations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace BrouwerService.Controllers
@@ -15,7 +16,11 @@ namespace BrouwerService.Controllers
     [ApiController]
     public class BrouwerController : ControllerBase {
         private readonly IBrouwerRepository repository;
-        public BrouwerController(IBrouwerRepository repository) => this.repository = repository;
+        private readonly IHttpClientFactory clientFactory;
+        public BrouwerController(IBrouwerRepository repository, IHttpClientFactory clientFactory) {
+            this.repository = repository;
+            this.clientFactory = clientFactory;
+        }
 
         [HttpGet]
         [SwaggerOperation("Alle brouwers")]
