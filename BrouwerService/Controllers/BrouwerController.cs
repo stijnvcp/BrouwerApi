@@ -22,6 +22,10 @@ namespace BrouwerService.Controllers
             this.clientFactory = clientFactory;
         }
 
+        public BrouwerController(IBrouwerRepository repository) {
+            this.repository = repository;
+        }
+
         [HttpGet]
         [SwaggerOperation("Alle brouwers")]
         public async Task<ActionResult> FindAll() => base.Ok(await repository.FindAllAsync());
