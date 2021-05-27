@@ -16,11 +16,6 @@ namespace BrouwerService.Controllers
     [ApiController]
     public class BrouwerController : ControllerBase {
         private readonly IBrouwerRepository repository;
-        private readonly IHttpClientFactory clientFactory;
-        public BrouwerController(IBrouwerRepository repository, IHttpClientFactory clientFactory) {
-            this.repository = repository;
-            this.clientFactory = clientFactory;
-        }
 
         public BrouwerController(IBrouwerRepository repository) {
             this.repository = repository;
